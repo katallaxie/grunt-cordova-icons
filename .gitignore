@@ -21,3 +21,5 @@ _SpecRunner.html
 .VolumeIcon.icns
 build
 node_modules
+icon.png
+splash.png
