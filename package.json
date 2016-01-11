@@ -44,7 +44,7 @@
     "phonegap"
   ],
   "directories": {},
-  "license": "Apache-2.0",
+  "license": "SEE LICENSE IN LICSENSE",
   "dependencies": {
     "android-icons": "^2.0.1",
     "async": "^1.5.2",
