@@ -62,7 +62,7 @@ module.exports = (grunt) => {
   }
 
   // register as multi task to have multiple targets running
-  grunt.registerMultiTask('icons', 'Creates icons, splash screens, or store assets for a Cordova project', function() {
+  grunt.registerMultiTask('icons', 'Creates icons for a Cordova project', function() {
     // console.log(this);
     let done = this.async(),
       tasks = [],
