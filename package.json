@@ -1,7 +1,7 @@
 {
   "name": "grunt-cordova-icons",
   "description": "A grunt plugin to generate icons of an Cordova project",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/katallaxie/grunt-cordova-icons",
   "author": {
     "name": "Sebastian Döll",
@@ -43,8 +43,7 @@
     "cordova-cli",
     "phonegap"
   ],
-  "directories": {
-  },
+  "directories": {},
   "license": "Apache-2.0",
   "dependencies": {
     "android-icons": "^2.0.1",
