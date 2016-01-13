@@ -18,6 +18,8 @@ module.exports = (grunt) => {
   };
 
   function run(tasks, done) {
+    // inform
+    log.ok('Processing ....');
     //done(false);
     async.parallel(tasks, (error) => {
       if (error) {
@@ -115,5 +117,8 @@ module.exports = (grunt) => {
       // end if there is nothing in the queue
       done();
     }
+
+    // inform
+    log.ok('Done.');
   });
 };
