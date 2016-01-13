@@ -19,7 +19,7 @@
       "type": "MIT"
     }
   ],
-  "main": "Gruntfile.js",
+  "main": "tasks/icons.js",
   "engines": {
     "node": ">= 5.3.0"
   },
