@@ -3,28 +3,39 @@
 
 // module
 module.exports = (grunt) => {
-  // dependencies
+  // modules
   const gm = require('gm');
   const path = require('path');
   const fs = require('fs');
   const async = require('async');
-  // map grunt
+  const Progress = require('progress');
+
+  // map
   const log = grunt.log;
   const util = grunt.util;
+
   // defaults
   let icons = {
     ios: require('ios-icons')(),
     android: require('android-icons')()
-  };
+  },
+  bar;
 
+  // run the queue
   function run(tasks, done) {
     // inform
     log.ok('Processing ....');
-    //done(false);
+    // progress
+    // progress bar
+    bar = new Progress('[:bar] :current/:total :elapsed', { total : tasks.length, width: 20 });
+    // run the tasks
     async.parallel(tasks, (error) => {
+      // error
       if (error) {
         throw new util.error(`Error-> Processing icons`);
       }
+      // inform
+      log.ok('Done.');
       // nothing else to do
       done(true);
     });
@@ -37,6 +48,9 @@ module.exports = (grunt) => {
         .resize(size.width || size.height, size.height || size.width, '!')
         .gravity('Center')
         .write(dst, error => {
+          // progress
+          bar.tick();
+          // error
           if (error) {
             log.error(error);
           } else {
@@ -90,6 +104,7 @@ module.exports = (grunt) => {
       return icons.hasOwnProperty(platform) || false;
     });
 
+    // is it an image
     if (!isImage(src)) {
       throw new util.error();
     }
@@ -117,8 +132,5 @@ module.exports = (grunt) => {
       // end if there is nothing in the queue
       done();
     }
-
-    // inform
-    log.ok('Done.');
   });
 };
