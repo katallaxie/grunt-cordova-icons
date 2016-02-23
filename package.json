@@ -49,7 +49,7 @@
     "android-icons": "^2.0.1",
     "async": "^1.5.2",
     "gm": "^1.21.1",
-    "ios-icons": "^3.1.0",
+    "ios-icons": "^3.3.0",
     "progress": "^1.1.8"
   }
 }
