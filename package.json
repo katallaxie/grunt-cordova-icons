@@ -1,7 +1,7 @@
 {
   "name": "grunt-cordova-icons",
   "description": "A grunt plugin to generate icons of an Cordova project",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "homepage": "https://github.com/katallaxie/grunt-cordova-icons",
   "author": {
     "name": "Sebastian Döll",
