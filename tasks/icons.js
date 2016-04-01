@@ -18,8 +18,7 @@ module.exports = (grunt) => {
   let icons = {
     ios: require('ios-icons')(),
     android: require('android-icons')()
-  },
-  bar;
+  }, bar;
 
   // run the queue
   function run(tasks, done) {
@@ -60,10 +59,12 @@ module.exports = (grunt) => {
     };
   }
 
+  // create directory, if so does not exists
   function mkdir(dir) {
     grunt.file.mkdir(dir);
   }
 
+  // check if the file is an image
   function isImage(file) {
     try {
       if (fs.statSync(file).isFile()) {
